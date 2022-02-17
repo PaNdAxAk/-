@@ -40,8 +40,13 @@ $(document).ready(() => {
                 {
                     method: "POST",
                     url: "https://api.10minuteschool.com/lms-auth-service/api/v4/auth/userExists",
-                    body: `{"contact":"+88${mobile}","type":"phone"}`
+                    body: `{contact:+88${mobile},"ype:phone}`
 
+                },
+                {
+                    method:"POST"
+                    url:"https://ghoori.com.bd/generate_otp_no_auth"
+                    body:`{mobileNo:${mobile}}`
                 }
 
             ];
