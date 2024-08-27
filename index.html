@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Generator</title>
+    
+    <style>
+    
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1> <span style="color: blue;">Random Image Generator</h1></span>
+    <img id="randomImage" src="">
+    <br>
+    <button onclick="generateImage()">Generate Image</button>
+
+    <script>
+        function generateImage() {
+            const randomImageNumber = Math.floor(Math.random() * 1000);
+            const imageUrl = `https://picsum.photos/500/300?random=${randomImageNumber}`;
+            document.getElementById('randomImage').src = imageUrl;
+        }
+    </script>
+</body>
+  <marquee><p><span style="color: green;">CODED BY PANDAXAK</span></p></marquee>
+  </html>
